@@ -1,8 +1,5 @@
-import { BsGithub, BsArrowRight } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { useState } from "react";
-import { Link } from "react-scroll";
-import { motion } from "framer-motion";
 import GithubLink from "./GithubLink";
 
 const Project = () => {
