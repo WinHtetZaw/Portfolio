@@ -2,15 +2,16 @@ import { BsGithub, BsArrowRight } from "react-icons/bs";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Project = () => {
   return (
     <>
-      <div className="h-screen bg-transparent pt-[70px]">
-        <div className=" w-full h-full flex justify-center items-center py-10 px-10">
+      <div className="min-h-screen bg-white pt-[70px]">
+        <div className=" w-full h-full flex justify-center items-center py-10 px-3 md:px-10">
           <div className="relative flex flex-wrap justify-around gap-y-10 rounded-lg  w-full">
             {/* card 1 */}
-            <div className="group card-container">
+            <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="500" className="group card-container">
               <div className="relative  h-full ">
                 <img
                   className="card-img"
@@ -42,7 +43,7 @@ const Project = () => {
             </div>
 
             {/* card 2 */}
-            <div className="group card-container">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="500" className="group card-container">
               <div className="relative  h-full ">
                 <img
                   className="card-img"
@@ -74,7 +75,7 @@ const Project = () => {
             </div>
 
             {/* card 3 */}
-            <div className="group card-container">
+            <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="500" className="group card-container">
               <div className="relative  h-full ">
                 <img
                   className="card-img"

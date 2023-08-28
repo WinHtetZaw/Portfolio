@@ -11,11 +11,8 @@ body {
   /* background-color: #1a2238; */
   /* color: #cccccc; */
   font-family: "Lato", sans-serif;
-  /* width: 100vw;
-  overflow-x: hidden; */
-  /* height: 100vh;
-  width: 100vw;
-  overflow: hidden; */
+  /* width: 100vw; */
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
 }
 
@@ -30,7 +27,9 @@ body {
 .active {
   background: rgba(255, 255, 255, 0.2);
   color: #ff0057;
-  /* transition: all 0.3s ease-out; */
+}
+.active-menu {
+  color: #ff0057;
 }
 
 /* #25262b dark soft*/
@@ -56,6 +55,39 @@ body {
   }
   .font-2 {
     font-family: "Roboto Slab", serif;
+  }
+  .bg-glass-1 {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .shadow-1 {
+    box-shadow: 0 15px 15px #00a8ff;
+  }
+  .shadow-2 {
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+  }
+  .bg-1 {
+    background: rgba(255, 255, 255, 0.18);
+  }
+  .border-rose {
+    border-color: #ff0057;
+  }
+  .bg-rose {
+    background-color: #ff0057;
+  }
+  .text-rose {
+    color: #ff0057;
   }
   .text-neon-1 {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
@@ -86,8 +118,22 @@ body {
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
       0 0 0.1em #ff4444, 0 10px 3px #000;
   }
+  .rotateY:hover {
+    transform: rotateY(15deg);
+    box-shadow: -15px 0 15px #ff0057;
+    /* box-shadow: -15px 0 30px 5px #ff0057; */
+  }
 }
 @layer components {
+  .click-animation {
+    @apply active:scale-95 transition duration-150;
+  }
+  .btn-1 {
+    @apply select-none py-1 px-4 border-rose-600 rounded-full border-[1.5px];
+  }
+  .btn-2 {
+    @apply select-none py-1 px-3 md:py-2 md:px-5 disabled:opacity-60 disabled:pointer-events-none capitalize rounded bg-rose text-white w-fit rotateY transition-all duration-300;
+  }
   .card-container {
     @apply w-[450px] h-[225px] rounded-lg relative overflow-hidden;
   }
@@ -107,6 +153,9 @@ body {
     @apply text-lg scale-[0.8] opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 delay-75 text-center;
   }
   .card-body-btn {
-    @apply capitalize py-1 px-4 select-none translate-y-10 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 delay-75 rounded-full border-[1.5px] border-rose-600 text-sm;
+    @apply capitalize btn-1 translate-y-10 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 delay-75 text-sm;
+  }
+  .form-input {
+    @apply px-3 py-1 border-b-[2px] md:w-[300px] bg-transparent border-black border-opacity-50 outline-none rounded-[5px] placeholder:text-slate-500 placeholder:select-none;
   }
 }

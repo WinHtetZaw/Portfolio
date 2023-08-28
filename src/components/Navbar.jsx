@@ -1,33 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import "./activeBox.css";
+import BurgerMenu from "./BurgerMenu";
 
-const Navbar = () => {
+const Navbar = ({isScrolled}) => {
   // * hooks
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
 
   const sections = ["about", "skill", "project", "contact"];
 
   // * useEffects
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      //   const isScrollingUp = prevScrollPos > currentScrollPos;
-      if (currentScrollPos > 1) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-      setPrevScrollPos(currentScrollPos);
-    };
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.scrollY;
+  //     //   const isScrollingUp = prevScrollPos > currentScrollPos;
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
+  //     if (currentScrollPos > 1) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //     setPrevScrollPos(currentScrollPos);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [prevScrollPos]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -39,6 +41,7 @@ const Navbar = () => {
   const handleSetActive = (sectionId) => {
     setActiveSection(sectionId);
   };
+
 
   return (
     <>
@@ -73,11 +76,11 @@ const Navbar = () => {
           </a>
 
         </div> */}
-        <ul className="flex font-[400] items-center gap-3">
+        <ul className="flex max-sm:hidden font-[400] items-center gap-3">
           {sections.map((section) => (
             <li key={section} className={` `}>
               <Link
-                className=" p-2 rounded-md uppercase select-none cursor-pointer transition duration-500 ease-out"
+                className=" p-2 rounded uppercase select-none cursor-pointer transition duration-500 ease-out"
                 to={section}
                 smooth={true}
                 spy={true}
@@ -90,6 +93,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <BurgerMenu isScrolled={isScrolled} sections={sections} handleSetActive={handleSetActive} />
       </div>
     </>
   );
