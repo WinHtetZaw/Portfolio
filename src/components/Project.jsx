@@ -3,6 +3,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import GithubLink from "./GithubLink";
 
 const Project = () => {
   return (
@@ -46,11 +47,12 @@ const Project = () => {
                     href="https://e-commerce-whz.vercel.app"
                     rel="noreferrer"
                     target="_blank"
+                    className="relative"
                   >
                     visit website
                   </a>
                 </button>
-                <BsGithub className="absolute top-5 text-rose-600 right-5 text-[20px] cursor-pointer peer/link" />
+                <GithubLink link="https://github.com/WinHtetZaw/e-commerce" />
                 <FaLongArrowAltRight className="absolute bottom-5 right-5 text-rose-600 text-[20px] -translate-x-10 peer-hover/link:translate-x-0 transition-all duration-200" />
               </div>
             </div>
@@ -75,8 +77,8 @@ const Project = () => {
 
               <div className="card-body-container">
                 <h2 className="card-body-title">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore, provident.
+                  Bringing cinematic stories to life through captivating designs
+                  and immersive experiences on the silver screen.
                 </h2>
                 <button className="card-body-btn peer/link">
                   <a
@@ -87,7 +89,7 @@ const Project = () => {
                     visit website
                   </a>
                 </button>
-                <BsGithub className="absolute top-5 right-5 text-rose-600 text-[20px] cursor-pointer peer/link" />
+                <GithubLink link="https://github.com/WinHtetZaw/Movie-app" />
                 <FaLongArrowAltRight className="absolute bottom-5 right-5 text-rose-600 text-[20px] -translate-x-10 peer-hover/link:translate-x-0 transition-all duration-200" />
               </div>
             </div>
@@ -112,8 +114,9 @@ const Project = () => {
 
               <div className="card-body-container">
                 <h2 className="card-body-title">
-                  Explore a diverse array of products and trends on our
-                  e-commerce site, all just a click away.
+                  Elevating brands through innovative solutions, our company
+                  portfolio showcases a tapestry of successful collaborations
+                  and impactful projects.
                 </h2>
                 <button className="card-body-btn peer/link">
                   <a

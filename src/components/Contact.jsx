@@ -9,6 +9,7 @@ import {
   EMAILJS_USER_ID,
 } from "../emailjs-config";
 import { motion } from "framer-motion";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -44,9 +45,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white flex justify-center items-center py-[100px] ">
-      <div className=" w-11/12 overflow-hidden min-h-[80vh] h-fit border-4 py-7">
-        <h2 data-aos="fade-down"
+    <div className="min-h-screen w-full overflow-hidden bg-white flex justify-center items-center py-[100px] ">
+      <div className="relative overflow-hidden w-11/12  min-h-[80vh] h-fit border-4 py-7">
+        <h2
+          data-aos="fade-down"
           data-aos-duration="500"
           data-aos-delay="150"
           className=" text-2xl w-fit mx-auto font-light my-10 capitalize"
@@ -145,6 +147,11 @@ const Contact = () => {
               </div>
             </form>
           </div>
+        </div>
+
+        <div className="absolute shadow-3 top-[45px] -right-[35px] rotate-45 w-[200px] flex gap-2 justify-center items-center py-1 rounded bg-[#25262b] text-[#ccc]">
+          <AiOutlineMail />
+          <span className=" text-[12px]">win1htet1@gmail.com</span>
         </div>
       </div>
     </div>

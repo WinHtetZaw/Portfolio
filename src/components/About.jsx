@@ -6,14 +6,21 @@ const About = () => {
     <>
       <div className=" min-h-screen py-[70px]  flex justify-center">
         <div className=" mt-[30px]">
-          <h1 data-aos="fade-down" data-aos-delay="150" data-aos-duration="500"
+          <h1
+            data-aos="fade-down"
+            data-aos-delay="150"
+            data-aos-duration="500"
             className="text-center capitalize text-4xl tracking-wide font-[300] my-10"
           >
             about me
           </h1>
 
-          <div className="flex items-center overflow-x-hidden w-[90%]">
-            <div data-aos="fade-right" data-aos-duration="500" className=" w-1/2  mx-auto mb-5">
+          <div className="flex max-sm:flex-col items-center overflow-x-hidden w-[90%] mx-auto">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="500"
+              className=" sm:w-1/2  mx-auto mb-5"
+            >
               <lottie-player
                 autoplay
                 loop
@@ -22,8 +29,13 @@ const About = () => {
                 style={{ width: "100%" }}
               ></lottie-player>
             </div>
-            <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="500" className="font-2 w-1/2 font-[300] tracking-wider text-center">
-              Passionate about crafting captivating web experiences, I am a
+            <p
+              data-aos="fade-left"
+              data-aos-delay="100"
+              data-aos-duration="500"
+              className="font-2 sm:w-1/2 font-[300] tracking-wider text-center"
+            >
+              {/* Passionate about crafting captivating web experiences, I am a
               dedicated React.js developer with a keen eye for detail and a
               penchant for turning complex problems into elegant solutions. With
               a strong foundation in modern web technologies and a drive to stay
@@ -32,7 +44,11 @@ const About = () => {
               expectations. Beyond coding, I am an enthusiastic learner, a
               collaborator, and a creative thinker, continuously seeking
               opportunities to push the boundaries of what&apos;s possible in
-              the digital realm.
+              the digital realm. */}
+              Passionate React.js developer with a knack for elegant solutions
+              and captivating user experiences. I embrace industry trends and
+              create applications that exceed expectations. A lifelong learner,
+              collaborator, and creative thinker, pushing digital boundaries.
             </p>
           </div>
         </div>

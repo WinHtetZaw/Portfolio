@@ -8,6 +8,7 @@ import { Element } from "react-scroll";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import ScrollBtn from "./components/ScrollBtn";
+import Foot from "./components/Foot";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,7 @@ const App = () => {
     };
   }, [prevScrollPos]);
   return (
-    <div className=" relative h-screen bg-fixed bg-[url(https://images.pexels.com/photos/7974/pexels-photo.jpg)] bg-no-repeat bg-cover bg-center">
+    <div className=" relative h-screen bg-fixed bg-[url(https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)] bg-no-repeat bg-cover bg-center">
       <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center"></div>
       <Navbar isScrolled={isScrolled} />
       <div className="">
@@ -66,7 +67,9 @@ const App = () => {
         <Contact />
       </Element>
 
-      <ScrollBtn/>
+      <ScrollBtn />
+
+      <Foot />
     </div>
   );
 };
