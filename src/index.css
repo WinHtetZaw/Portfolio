@@ -18,11 +18,11 @@ body {
 
 .glass-1 {
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border-radius: 5px; */
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 .active {
   background: rgba(255, 255, 255, 0.2);
@@ -64,6 +64,9 @@ body {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .form-bg {
+    @apply bg-black bg-opacity-20 backdrop-blur-sm
   }
   .absolute-center {
     position: absolute;

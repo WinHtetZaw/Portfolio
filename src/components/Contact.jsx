@@ -44,32 +44,30 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex justify-center items-center pt-[100px] pb-[30px] ">
-      <div className=" w-[90%] h-full border-4 p-7">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className=" text-2xl w-fit mx-auto font-light mb-10 capitalize"
+    <div className="min-h-screen w-full bg-white flex justify-center items-center py-[100px] ">
+      <div className=" w-11/12 overflow-hidden min-h-[80vh] h-fit border-4 py-7">
+        <h2 data-aos="fade-down"
+          data-aos-duration="500"
+          data-aos-delay="150"
+          className=" text-2xl w-fit mx-auto font-light my-10 capitalize"
         >
           message to me
-        </motion.h2>
+        </h2>
 
-        <div className="relative w-full min-h-[80%] flex justify-center items-center">
-          <motion.div
-            initial={{ rotateY: "90deg" }}
-            whileInView={{ rotateY: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className=" w-full md:w-1/2"
+        <div className="relative mb-10 w-full h-full flex justify-center items-center">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="500"
+            className=" w-full md:w-1/2 h-full"
           >
             <MessageSvg />
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ rotateY: "90deg" }}
-            whileInView={{ rotateY: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="max-md:absolute inset-0  w-full h-full max-md:bg-glass-1 md:w-1/2 flex justify-center items-center"
+          <div
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="500"
+            className="max-md:absolute inset-0 w-full min-h-[60vh] h-full max-md:bg-glass-1 md:w-1/2 flex justify-center items-center"
           >
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -146,7 +144,7 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

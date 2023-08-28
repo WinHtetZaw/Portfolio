@@ -4,19 +4,16 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <>
-      <div className=" min-h-screen pt-[70px] bg-white flex justify-center">
+      <div className=" min-h-screen py-[70px]  flex justify-center">
         <div className=" mt-[30px]">
-          <motion.h1
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1,delay:0.5 }}
-            className="text-center uppercase text-4xl tracking-wide font-[300] mb-5"
+          <h1 data-aos="fade-down" data-aos-delay="150" data-aos-duration="500"
+            className="text-center capitalize text-4xl tracking-wide font-[300] my-10"
           >
             about me
-          </motion.h1>
+          </h1>
 
-          <div className="flex items-center w-[90%]">
-            <div data-aos="fade-right" className=" w-1/2  mx-auto mb-5">
+          <div className="flex items-center overflow-x-hidden w-[90%]">
+            <div data-aos="fade-right" data-aos-duration="500" className=" w-1/2  mx-auto mb-5">
               <lottie-player
                 autoplay
                 loop
@@ -25,11 +22,7 @@ const About = () => {
                 style={{ width: "100%" }}
               ></lottie-player>
             </div>
-            <p
-              data-aos="fade-left"
-              data-aos-delay="300"
-              className="font-2 w-1/2 font-[300] tracking-wider text-center"
-            >
+            <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="500" className="font-2 w-1/2 font-[300] tracking-wider text-center">
               Passionate about crafting captivating web experiences, I am a
               dedicated React.js developer with a keen eye for detail and a
               penchant for turning complex problems into elegant solutions. With

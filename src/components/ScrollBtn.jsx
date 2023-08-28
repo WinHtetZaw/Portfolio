@@ -1,6 +1,7 @@
-import { motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { CircularProgressBar } from "@tomickigrzegorz/react-circular-progress-bar";
+// import { Tooltip } from "react-tooltip";
 
 const ScrollBtn = () => {
   const [showButton, setShowButton] = useState(false);
@@ -14,18 +15,19 @@ const ScrollBtn = () => {
     });
   };
 
-  const handleScroll = () => {
-    const isTop = window.scrollY === 0;
-    setShowButton(!isTop);
-
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight - windowHeight;
-    const scrollPosition = window.scrollY;
-    const progress = (scrollPosition / documentHeight) * 100;
-    setScrollProgress(progress);
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY === 0;
+      setShowButton(!isTop);
+
+      const windowHeight = window.innerHeight;
+      const documentHeight =
+        document.documentElement.scrollHeight - windowHeight;
+      const scrollPosition = window.scrollY;
+      const progress = (scrollPosition / documentHeight) * 100;
+      setScrollProgress(progress);
+    };
+
     // controls.start({ opacity: showButton ? 1 : 0 });
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -66,57 +68,24 @@ const ScrollBtn = () => {
 
   return (
     <>
-      {/* <motion.button
-        className="fixed bottom-5 right-5 bg-blue-500 p-3 rounded-full"
-        onClick={scrollToTop}
-        animate={controls}
-      >
-        <motion.div
-          className="w-6 h-6 bg-white rounded-full"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.3 }}
-        />
-      </motion.button> */}
-
-      {/* <div className="fixed bottom-5 right-5 flex flex-col items-center">
-        <motion.button
-          className={`bg-blue-500 p-3 rounded-full ${
-            showButton ? "block" : "hidden"
-          }`}
-          onClick={scrollToTop}
-          animate={controls}
-        >
+      <AnimatePresence>
+        {showButton && (
+          // data-tooltip-id="scroll-top"
           <motion.div
-            className="w-6 h-6 bg-white rounded-full"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.3 }}
-          />
-        </motion.button>
-        <div className="relative mt-2 w-10 h-10">
-          <div className="absolute top-0 left-0 w-full h-full transform origin-center">
-            <motion.div
-              className="w-full h-full bg-blue-300 rounded-full"
-              //   style={{
-              //     transform: `rotate(${scrollProgress * 3.6}deg)`, // Convert progress to degrees
-              //   }}
-            />
-          </div>
-          <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-            <span>{Math.round(scrollProgress)}%</span>
-          </div>
-        </div>
-      </div> */}
-
-      {showButton && (
-        <div className="fixed bottom-5 w-fit h-fit bg-red-300 group right-5">
-          <button onClick={scrollToTop}>
-            <CircularProgressBar {...props} />
-          </button>
-          <div className="absolute hidden group-hover:block bg-black">Scroll to top</div>
-        </div>
-      )}
+            exit={{ scale: 0 }}
+            transition={{ duration: 0.3,ease:"easeIn" }}
+            data-tooltip-id="scroll-top"
+            className="fixed bottom-5 w-fit h-fit right-5"
+          >
+            <button onClick={scrollToTop}>
+              <CircularProgressBar {...props} />
+            </button>
+            {/* <Tooltip id="scroll-top" place="top" content="Scroll To Top" /> */}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

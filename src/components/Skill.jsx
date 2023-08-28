@@ -7,14 +7,25 @@ import { FaLaravel } from "react-icons/fa";
 const Skill = () => {
   return (
     <>
-      <div className="w-full min-h-screen flex flex-col justify-center bg-[#25262b] items-center">
-        <h1 className=" capitalize font-[300] text-4xl text-[#ccc] my-10">
+      <div className="w-full min-h-screen py-[70px] flex flex-col justify-center bg-[#25262b] items-center">
+        <h1
+          data-aos="fade-down"
+          data-aos-duration="500"
+          data-aos-delay="150"
+          className=" capitalize font-[300] text-4xl text-[#ccc] my-10"
+        >
           Here are my skills!
         </h1>
 
         <div className="w-full flex max-lg:flex-col justify-around items-center">
           {/* card 1  */}
-          <div data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in" className="card">
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+            data-aos-duration="700"
+            data-aos-easing="ease-out"
+            className="card"
+          >
             <div className="face face1">
               <div className="content">
                 <BsCodeSlash className="text-[80px] text-white mx-auto" />
@@ -36,7 +47,13 @@ const Skill = () => {
           </div>
 
           {/* card 2  */}
-          <div data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in" className="card">
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-easing="ease-out"
+            className="card"
+          >
             <div className="face face1">
               <div className="content">
                 <BiLogoReact className="text-[80px] text-white mx-auto" />
@@ -58,7 +75,13 @@ const Skill = () => {
           </div>
 
           {/* card 3  */}
-          <div data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-in" className="card">
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            data-aos-duration="700"
+            data-aos-easing="ease-out"
+            className="card"
+          >
             <div className="face face1">
               <div className="content">
                 {/* <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true" /> */}

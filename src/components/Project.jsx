@@ -7,11 +7,24 @@ import { motion } from "framer-motion";
 const Project = () => {
   return (
     <>
-      <div className="min-h-screen bg-white pt-[70px]">
-        <div className=" w-full h-full flex justify-center items-center py-10 px-3 md:px-10">
-          <div className="relative flex flex-wrap justify-around gap-y-10 rounded-lg  w-full">
+      <div className="min-h-screen py-[70px]">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="500"
+          data-aos-delay="150"
+          className="text-center capitalize text-4xl tracking-wide font-[300] my-10"
+        >
+          some of my projects
+        </div>
+        <div className=" w-full h-full flex flex-col justify-center items-center py-10 px-3 md:px-10">
+          <div className="relative flex flex-wrap justify-around gap-y-16 rounded-lg  w-full">
             {/* card 1 */}
-            <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="500" className="group card-container">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="100"
+              data-aos-duration="500"
+              className="group card-container"
+            >
               <div className="relative  h-full ">
                 <img
                   className="card-img"
@@ -43,7 +56,12 @@ const Project = () => {
             </div>
 
             {/* card 2 */}
-            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="500" className="group card-container">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="500"
+              className="group card-container"
+            >
               <div className="relative  h-full ">
                 <img
                   className="card-img"
@@ -75,7 +93,12 @@ const Project = () => {
             </div>
 
             {/* card 3 */}
-            <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="500" className="group card-container">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="300"
+              data-aos-duration="500"
+              className="group card-container"
+            >
               <div className="relative  h-full ">
                 <img
                   className="card-img"
