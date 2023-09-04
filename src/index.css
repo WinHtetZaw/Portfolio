@@ -98,7 +98,8 @@ body {
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   }
   .shadow-5 {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
   .bg-1 {
     background: rgba(255, 255, 255, 0.18);
@@ -108,6 +109,45 @@ body {
   }
   .bg-rose {
     background-color: #ff0057;
+  }
+  .bg-white-gradient {
+    background-image: linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 55%,
+        rgba(64, 64, 64, 0.04) 55%,
+        rgba(64, 64, 64, 0.04) 76%,
+        transparent 76%,
+        transparent 100%
+      ),
+      linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 14%,
+        rgba(64, 64, 64, 0.04) 14%,
+        rgba(64, 64, 64, 0.04) 41%,
+        transparent 41%,
+        transparent 100%
+      ),
+      linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 2%,
+        rgba(64, 64, 64, 0.04) 2%,
+        rgba(64, 64, 64, 0.04) 18%,
+        transparent 18%,
+        transparent 100%
+      ),
+      linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 61%,
+        rgba(64, 64, 64, 0.04) 61%,
+        rgba(64, 64, 64, 0.04) 71%,
+        transparent 71%,
+        transparent 100%
+      ),
+      linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
   }
   .text-rose {
     color: #ff0057;

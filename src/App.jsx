@@ -14,20 +14,6 @@ const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
 
-  // const ref = useRef();
-
-  // const handleScroll = () => {
-  //   const rect = ref.current.getBoundingClientRect();
-  //   const distanceFromTop = rect.top;
-
-  //   // console.log("Distance from top:", distanceFromTop);
-  //   if (distanceFromTop == 0) {
-  //     setIsScrolled(false);
-  //   } else {
-  //     setIsScrolled(true);
-  //   }
-  // };
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;

@@ -46,21 +46,21 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen w-full overflow-hidden bg-white flex justify-center items-center py-[100px] ">
-      <div className="relative overflow-hidden w-11/12  min-h-[80vh] h-fit border-4 py-7">
+      <div className="relative max-md:bg-white-gradient overflow-hidden w-11/12  min-h-[80vh] h-fit border-4 py-7">
         <h2
           data-aos="fade-down"
           data-aos-duration="500"
           data-aos-delay="150"
-          className=" text-2xl w-fit mx-auto font-light my-10 capitalize"
+          className=" text-2xl w-fit mx-auto font-light my-5 md:my-10 capitalize"
         >
-          message to me
+         email me
         </h2>
 
         <div className="relative mb-10 w-full h-full flex justify-center items-center">
           <div
             data-aos="fade-right"
             data-aos-duration="500"
-            className=" w-full md:w-1/2 h-full"
+            className=" w-full max-md:hidden md:w-1/2 h-full"
           >
             <MessageSvg />
           </div>
@@ -69,7 +69,7 @@ const Contact = () => {
             data-aos="fade-left"
             data-aos-delay="100"
             data-aos-duration="500"
-            className="max-md:absolute inset-0 w-full min-h-[60vh] h-full max-md:bg-glass-1 md:w-1/2 flex justify-center items-center"
+            className=" w-full  min-h-[60vh] h-full md:w-1/2 flex justify-center items-center"
           >
             <form
               onSubmit={handleSubmit(onSubmit)}
