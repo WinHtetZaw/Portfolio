@@ -42,15 +42,10 @@ const Foot = () => {
           <BiLogoTelegram className="logo " />
         </a>
 
-        <a
-          href="https://twitter.com/WinHtet36236900?s=09"
-          rel="noreferrer"
-          target="_blank"
-          className="relative flex items-center justify-center group"
-        >
+        <div className="relative flex items-center justify-center group">
           <span className="logo-border"></span>
           <AiOutlineTwitter className="logo " />
-        </a>
+        </div>
 
         <div className="relative flex items-center justify-center group">
           <span className="logo-border"></span>

@@ -18,7 +18,7 @@ const Project = () => {
           <div className="relative flex flex-wrap justify-around gap-y-16 rounded-lg  w-full">
             {/* card 1 */}
             <div
-              data-aos="fade-right"
+              data-aos="zoom-in-up"
               data-aos-delay="100"
               data-aos-duration="500"
               className="group card-container"
@@ -56,7 +56,7 @@ const Project = () => {
 
             {/* card 2 */}
             <div
-              data-aos="fade-right"
+              data-aos="zoom-in-up"
               data-aos-delay="200"
               data-aos-duration="500"
               className="group card-container"
@@ -93,7 +93,7 @@ const Project = () => {
 
             {/* card 3 */}
             <div
-              data-aos="fade-right"
+              data-aos="zoom-in-up"
               data-aos-delay="300"
               data-aos-duration="500"
               className="group card-container"
@@ -118,6 +118,44 @@ const Project = () => {
                 <button className="card-body-btn peer/link">
                   <a
                     href="https://company-portfolio-pied.vercel.app"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    visit website
+                  </a>
+                </button>
+                <BsGithub className="absolute top-5 text-rose-600 right-5 text-[20px] cursor-pointer peer/link" />
+                <FaLongArrowAltRight className="absolute bottom-5 right-5 text-rose-600 text-[20px] -translate-x-10 peer-hover/link:translate-x-0 transition-all duration-200" />
+              </div>
+            </div>
+
+            {/* card 4 */}
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay="300"
+              data-aos-duration="500"
+              className="group card-container"
+            >
+              <div className="relative  h-full ">
+                <img
+                  className="card-img"
+                  src="https://images.pexels.com/videos/11612324/pexels-photo-11612324.jpeg?auto=compress&cs=tinysrgb&h=204&fit=crop&w=228&dpr=2"
+                  alt=""
+                />
+                <div className="card-cover-container">
+                  <h3 className="card-cover-title">food show</h3>
+                </div>
+              </div>
+
+              <div className="card-body-container">
+                <h2 className="card-body-title">
+                  Explore the delectable world of culinary delights on our food
+                  show website, where flavors come to life and every bite tells
+                  a story.
+                </h2>
+                <button className="card-body-btn peer/link">
+                  <a
+                    href="https://food-one-omega.vercel.app"
                     rel="noreferrer"
                     target="_blank"
                   >
