@@ -35,20 +35,15 @@ const About = () => {
               data-aos-duration="500"
               className="font-2 sm:w-1/2 font-[300] tracking-wider text-center"
             >
-              {/* Passionate about crafting captivating web experiences, I am a
-              dedicated React.js developer with a keen eye for detail and a
-              penchant for turning complex problems into elegant solutions. With
-              a strong foundation in modern web technologies and a drive to stay
-              at the forefront of industry trends, I strive to create
-              user-centric applications that not only meet but exceed
-              expectations. Beyond coding, I am an enthusiastic learner, a
-              collaborator, and a creative thinker, continuously seeking
-              opportunities to push the boundaries of what&apos;s possible in
-              the digital realm. */}
-              Passionate React.js developer with a knack for elegant solutions
+              {/* Passionate React.js developer with a knack for elegant solutions
               and captivating user experiences. I embrace industry trends and
               create applications that exceed expectations. A lifelong learner,
-              collaborator, and creative thinker, pushing digital boundaries.
+              collaborator, and creative thinker, pushing digital boundaries. */}
+              As a frontend developer with a deep passion for the web
+              development field, I am driven by a relentless curiosity for
+              learning and adapting to new technologies. I am known for my
+              strong work ethic and dedication, striving to deliver exceptional
+              results in every project I undertake.
             </p>
           </div>
         </div>

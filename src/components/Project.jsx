@@ -18,12 +18,11 @@ const Project = () => {
             <ProjectCard
               data={{
                 cover:
-                  "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600",
-                title: "e-commerce",
-                paragraph: `Explore a diverse array of products and trends on our
-                e-commerce site, all just a click away.`,
-                projectLink: "https://e-commerce-whz.vercel.app",
-                githubLink: "https://github.com/WinHtetZaw/e-commerce",
+                  "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29udGFjdHxlbnwwfHwwfHx8MA%3D%3D",
+                title: "Contact App",
+                paragraph: `Stay connected and organized with our user-friendly contact app website, making managing your contacts a breeze.`,
+                projectLink: "https://contact-app-kappa-one.vercel.app",
+                githubLink: "https://github.com/WinHtetZaw/contact_whz",
               }}
             />
 
@@ -44,6 +43,18 @@ const Project = () => {
             <ProjectCard
               data={{
                 cover:
+                  "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600",
+                title: "e-commerce",
+                paragraph: `Explore a diverse array of products and trends on our
+                e-commerce site, all just a click away.`,
+                projectLink: "https://e-commerce-whz.vercel.app",
+                githubLink: "https://github.com/WinHtetZaw/e-commerce",
+              }}
+            />
+
+            {/* <ProjectCard
+              data={{
+                cover:
                   "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29tcGFueSUyMHBvcnRmb2xpb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
                 title: "company portfolio",
                 paragraph: `Elevating brands through innovative solutions, our company
@@ -52,7 +63,7 @@ const Project = () => {
                 projectLink: "https://company-portfolio-pied.vercel.app",
                 githubLink: "",
               }}
-            />
+            /> */}
 
             {/* card 4 */}
             <ProjectCard
